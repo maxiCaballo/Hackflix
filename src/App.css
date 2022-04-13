@@ -83,8 +83,8 @@ header a {
   --organic-arrow-thickness: 4px;
   --organic-arrow-border-radius: 0px;
   --organic-arrow-height: 40px;
-  --organic-arrow-color: #cf3438;
-  --control-button-width: 10%;
+  --organic-arrow-color: #c31319;
+  --control-button-width: 15%;
   --control-button-height: 25%;
   --control-button-background: transparent;
   --control-bullet-color: #f33d42;
@@ -173,22 +173,25 @@ main > div {
   height: 100vh;
 }
 #MoviePage .movie-container {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(22, 22, 22, 0.6);
+  height: 100vh;
+  background-color: rgba(22, 22, 22, 0.7);
 }
-#MoviePage .movie-description {
-  height: 100%;
-  width: 60%;
-}
-#MoviePage .movie-poster-image-container {
-  height: 100%;
-  width: 40%;
-}
+
 #MoviePage .movie-poster-image {
+  border-radius: 8%;
   width: 400px;
   height: 600px;
-  border-radius: 8%;
+  border: 1.5px solid rgb(66, 61, 61);
+}
+#MoviePage .title {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+#MoviePage p {
+  font-size: 0.9rem;
+}
+#MoviePage .overview {
+  color: rgb(252, 148, 148);
 }
 
 @media only screen and (min-width: 480px) {

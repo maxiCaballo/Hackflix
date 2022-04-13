@@ -53,20 +53,20 @@ function Header() {
                 <p className=" fs-1 text-center animate__animated animate__backInDown">
                   {movie.title}
                 </p>
-                <div className="h-25 d-flex align-items-center justify-content-between flex-row">
-                  <span className="fs-5 animate__animated animate__backInLeft">
+                <div className="h-25 row">
+                  <span className="col-lg-6 fs-5 animate__animated animate__backInLeft centered">
                     Relase date : {movie.release_date}{" "}
                   </span>
-                  <div className="d-flex align-items-center">
-                    <span className="mx-2 fs-5 animate__animated animate__backInLeft">
+                  <div className="col-lg-6 d-flex align-items-center justify-content-end p-0">
+                    <span className="fs-5 animate__animated animate__backInLeft w-100 text-end centered">
                       Rating :
+                      <ReactStars
+                        {...{
+                          ...starStylesValues,
+                          count: Math.ceil(movie.vote_average) / 2,
+                        }}
+                      />
                     </span>
-                    <ReactStars
-                      {...{
-                        ...starStylesValues,
-                        count: Math.ceil(movie.vote_average) / 2,
-                      }}
-                    />
                   </div>
                 </div>
               </div>
