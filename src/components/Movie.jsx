@@ -28,7 +28,7 @@ function Movie() {
 
   return (
     <>
-      <header className="m-0">
+      <header>
         <Navbar />
       </header>
       <main
@@ -37,50 +37,65 @@ function Movie() {
           background: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path}) center center/cover`,
         }}
       >
-        <div className="movie-container row m-0">
-          <div className="movie-description p-0 h-100 col-xs-12 col-md-6 col-lg-8">
-            <div className=" h-100  animate__animated animate__bounceInLeft  p-4 centered">
-              <div className="h-75 d-flex justify-content-center flex-column ">
-                <div className="title">
-                  <span> {movie.title}</span>
-                </div>
-                {movie.vote_average && (
-                  <>
-                    <div className="d-flex align-items-center">
-                      <span className="me-2 text-decoration-underline fs-5">
-                        Rating:
-                      </span>
-                      <ReactStars
-                        {...{
-                          ...starStylesValues,
-                          count: Math.ceil(movie.vote_average) / 2,
-                        }}
-                      />
-                    </div>
-                  </>
-                )}
+        <div className="movie-container m-0 ">
+          <div className="row container">
+            <div className="movie-description p-0 h-100 col-xs-12 col-md-6 col-lg-8">
+              <div className=" h-100  animate__animated animate__bounceInLeft  py-4 px-0 centered">
+                <div className="h-75 d-flex justify-content-center flex-column ">
+                  <div className="title">
+                    <span> {movie.title}</span>
+                  </div>
+                  {movie.vote_average && (
+                    <>
+                      <div className="d-flex align-items-center">
+                        <span className="me-2 text-decoration-underline fs-5">
+                          Rating:
+                        </span>
+                        <ReactStars
+                          {...{
+                            ...starStylesValues,
+                            count: Math.ceil(movie.vote_average) / 2,
+                          }}
+                        />
+                      </div>
+                    </>
+                  )}
 
-                <div className="mb-3">
-                  <span className="text-decoration-underline me-2 fs-5">
-                    Date:
-                  </span>{" "}
-                  {movie.release_date}
-                </div>
+                  <div className="mb-3">
+                    <span className="text-decoration-underline me-2 fs-5">
+                      Date:
+                    </span>{" "}
+                    {movie.release_date}
+                  </div>
 
-                <span className=" text-decoration-underline fs-5 overview">
-                  Overview:
-                </span>
-                <p>{movie.overview}</p>
+                  <span className=" text-decoration-underline fs-5 overview">
+                    Overview:
+                  </span>
+                  <p>{movie.overview}</p>
+                  <button className="learn-more">
+                    <span className="circle" aria-hidden="true">
+                      <span className="icon arrow"></span>
+                    </span>
+                    <a
+                      className="button-text"
+                      target="_blank"
+                      href={movie.homepage}
+                      rel="noreferrer"
+                    >
+                      Official page
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="movie-poster-image-container d-none d-md-flex col-md-6 col-lg-4 h-100 centered">
-            <div
-              className="movie-poster-image animate__animated animate__zoomIn"
-              style={{
-                background: `url(https://image.tmdb.org/t/p/w500${movie.poster_path}) center center/cover`,
-              }}
-            ></div>
+            <div className="movie-poster-image-container d-none d-md-flex col-md-6 col-lg-4 h-100 centered">
+              <div
+                className="movie-poster-image animate__animated animate__zoomIn"
+                style={{
+                  background: `url(https://image.tmdb.org/t/p/w500${movie.poster_path}) center center/cover`,
+                }}
+              ></div>
+            </div>
           </div>
         </div>
       </main>

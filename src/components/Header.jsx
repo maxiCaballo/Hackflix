@@ -61,6 +61,7 @@ function Header() {
                     <span className="fs-5 animate__animated animate__backInLeft w-100 text-end centered">
                       Rating :
                       <ReactStars
+                        classNames="ms-2"
                         {...{
                           ...starStylesValues,
                           count: Math.ceil(movie.vote_average) / 2,
