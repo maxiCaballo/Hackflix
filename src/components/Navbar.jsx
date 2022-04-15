@@ -14,14 +14,20 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/" className="d-flex align-items-center navbar-item mx-5">
+            <Link to="/" className="d-flex align-items-center navbar-item mx-4">
               Home
             </Link>
             <Link
               to="/search-title"
-              className="d-flex align-items-center navbar-item mx-5"
+              className="d-flex align-items-center navbar-item mx-4"
             >
               Search by title
+            </Link>
+            <Link
+              to="/about"
+              className="d-flex align-items-center navbar-item mx-4"
+            >
+              About
             </Link>
           </Nav>
         </Navbar.Collapse>

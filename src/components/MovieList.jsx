@@ -23,7 +23,7 @@ export default function MovieList({ movies, setPage, page }) {
               movies.map((movie) => {
                 return movie.poster_path ? (
                   <ImgContainer
-                    className="img_container"
+                    className="img_container text-center"
                     title={movie.title}
                     onClick={() => navigate(`/movies/${movie.id}`)}
                   >
