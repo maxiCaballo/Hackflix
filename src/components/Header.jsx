@@ -6,11 +6,13 @@ import apiConfig from "../apiConfig";
 import { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const AutoplaySlider = withAutoplay(AwesomeSlider);
   const [movies, setMovies] = useState([]);
   const imgSlider = [];
+  const navigate = useNavigate();
   for (const movie of movies) {
     imgSlider.push("https://image.tmdb.org/t/p/original" + movie.backdrop_path);
   }
@@ -50,7 +52,11 @@ function Header() {
               className="image_centered img_slider_container d-flex flex-column align-items-center justify-content-end"
             >
               <div className="w-75 h-50 my-3 d-flex flex-column justify-content-between">
-                <p className=" fs-1 text-center animate__animated animate__backInDown">
+                <p
+                  className=" fs-1 text-center animate__animated animate__backInDown"
+                  onClick={() => navigate(`/movies/${movie.id}`)}
+                  style={{ cursor: "pointer" }}
+                >
                   {movie.title}
                 </p>
                 <div className="h-25 row">
