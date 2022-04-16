@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import apiConfig from "../apiConfig";
 import Navbar from "./Navbar";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
 
 function SearchByTitle() {
   const [title, setTitle] = useState(1);
@@ -25,12 +26,13 @@ function SearchByTitle() {
   }, [title, page]);
   return (
     <>
+      <ScrollToTop />
       <header>
         <Navbar />
       </header>
       <main className="container search_title_main">
         <div className="a">
-          <div className="input_search rounded-pill">
+          <div className="input_search rounded-pill border">
             <i className="fa-solid fa-magnifying-glass p-1"></i>
             <input
               type="text"

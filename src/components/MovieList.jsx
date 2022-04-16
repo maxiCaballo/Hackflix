@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export default function MovieList({ movies, setPage, page }) {
   const navigate = useNavigate();
+
   return (
     <section>
       <InfiniteScroll
@@ -33,7 +34,7 @@ export default function MovieList({ movies, setPage, page }) {
                         "https://image.tmdb.org/t/p/w500" + movie.poster_path
                       }
                       alt="movie_image"
-                      className=" list_img border-radius-card movie-card"
+                      className=" list_img border-radius-card movie-card border border-danger "
                       width={270}
                       height={400}
                     />
@@ -66,6 +67,7 @@ export default function MovieList({ movies, setPage, page }) {
 
 const ImgContainer = styled.div`
   position: relative;
+
   &::after {
     display: flex;
     align-items: center;

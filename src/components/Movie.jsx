@@ -48,7 +48,7 @@ function Movie() {
                   {movie.vote_average && (
                     <>
                       <div className="d-flex align-items-center">
-                        <span className="me-2 text-decoration-underline fs-5">
+                        <span className="me-2 text-decoration-underline fs-5 fs-mobile">
                           Rating:
                         </span>
                         <ReactStars
@@ -62,7 +62,7 @@ function Movie() {
                   )}
 
                   <div className="mb-3">
-                    <span className="text-decoration-underline me-2 fs-5">
+                    <span className="text-decoration-underline me-2 fs-5 fs-mobile">
                       Date:
                     </span>{" "}
                     {movie.release_date}
@@ -88,7 +88,7 @@ function Movie() {
                 </div>
               </div>
             </div>
-            <div className="movie-poster-image-container d-none d-md-flex col-md-6 col-lg-4 h-100 centered">
+            <div className="movie-poster-image-container d-none d-md-flex col-md-6 col-lg-4 h-100 centered ">
               <div
                 className="movie-poster-image animate__animated animate__zoomIn"
                 style={{

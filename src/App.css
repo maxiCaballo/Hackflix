@@ -24,10 +24,12 @@ header .header-logo:hover {
   position: relative;
   text-decoration: none;
   color: rgb(225, 223, 223);
+  transition: 0.3s;
 }
 .navbar-item:hover {
   color: rgb(235, 39, 0);
 }
+
 @media only screen and (max-width: 991px) {
   header .navbar-item:hover {
     color: rgb(235, 39, 0);
@@ -45,7 +47,7 @@ header .header-logo:hover {
     opacity: 0;
     transform-origin: left center;
     transform: scaleX(0);
-    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   }
   header .navbar-item:hover::after {
     transform: scaleX(1);
@@ -61,7 +63,7 @@ header a {
   max-width: 200px;
 }
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   z-index: 5000;
   width: 100%;
@@ -110,7 +112,7 @@ header a {
   height: 100%;
 }
 .rating {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .input_search {
   background-color: #000;
@@ -178,15 +180,29 @@ main > div {
   height: 600px;
   border: 1.5px solid rgb(66, 61, 61);
 }
+
 #MoviePage .title {
   font-size: 4rem;
   margin-bottom: 50px;
 }
+
 #MoviePage p {
   font-size: 1rem;
 }
 #MoviePage .overview {
   color: rgb(245, 104, 104);
+}
+
+@media only screen and (max-width: 450px) {
+  #MoviePage .title {
+    font-size: 2rem;
+  }
+  #MoviePage p {
+    font-size: 0.9rem;
+  }
+  #MoviePage .fs-mobile {
+    font-size: 1rem !important;
+  }
 }
 button {
   position: relative;

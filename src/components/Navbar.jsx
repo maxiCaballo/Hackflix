@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 
 function NavBar() {
   return (
-    <Navbar bg="dark" className="navbar" expand="lg">
+    <Navbar className="navbar" expand="lg">
       <Container className="ps-4">
         <Link to="/">
           <span className="fs-3 header-logo">
@@ -11,7 +11,10 @@ function NavBar() {
             Hackflix
           </span>
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          style={{ background: "#d8d8d8" }}
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Link to="/" className="d-flex align-items-center navbar-item mx-4">
@@ -22,6 +25,12 @@ function NavBar() {
               className="d-flex align-items-center navbar-item mx-4"
             >
               Search by title
+            </Link>
+            <Link
+              to="/search-rating"
+              className="d-flex align-items-center navbar-item mx-4"
+            >
+              Search by rating
             </Link>
             <Link
               to="/about"

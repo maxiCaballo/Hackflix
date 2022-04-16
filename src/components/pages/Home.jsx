@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="container">
+      <main className="container mt-5">
         <CHome />
       </main>
     </>
