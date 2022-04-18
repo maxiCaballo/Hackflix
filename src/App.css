@@ -152,6 +152,7 @@ main > div {
 }
 .movie-card {
   transition: 0.3s;
+  border: 2px solid #fffafa4e;
 }
 
 .list_img {

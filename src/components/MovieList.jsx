@@ -34,7 +34,7 @@ export default function MovieList({ movies, setPage, page }) {
                         "https://image.tmdb.org/t/p/w500" + movie.poster_path
                       }
                       alt="movie_image"
-                      className=" list_img border-radius-card movie-card border border-danger "
+                      className=" list_img border-radius-card movie-card"
                       width={270}
                       height={400}
                     />
@@ -76,7 +76,7 @@ const ImgContainer = styled.div`
     content: "${({ title }) => title}";
     position: absolute;
     height: 2px;
-    background: rgb(235, 39, 0);
+    background: #fffafa4e;
     left: 0;
     right: 0;
     bottom: 0;

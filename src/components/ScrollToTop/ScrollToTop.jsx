@@ -1,4 +1,4 @@
-import styles from "./styles.css";
+import "./styles.css";
 import { useState } from "react";
 
 function ScrollToTop() {

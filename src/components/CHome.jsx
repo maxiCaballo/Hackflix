@@ -1,3 +1,4 @@
+//Components
 import MovieList from "./MovieList";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
 //
