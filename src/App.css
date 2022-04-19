@@ -292,3 +292,19 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
   color: rgb(250, 30, 30);
 }
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+@media only screen and (max-width: 570px) {
+  .slick-prev {
+    margin-left: 50px;
+    z-index: 1;
+  }
+  .slick-next {
+    margin-right: 50px;
+  }
+}

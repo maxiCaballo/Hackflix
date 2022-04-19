@@ -27,6 +27,7 @@ export default function MovieList({ movies, setPage, page }) {
                     className="img_container text-center"
                     title={movie.title}
                     onClick={() => navigate(`/movies/${movie.id}`)}
+                    key={movie.id * Math.random()}
                   >
                     <img
                       key={movie.id * Math.random()}

@@ -1,30 +1,34 @@
 //Components
-import MovieList from "./MovieList";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
+import Carrousel from "./CarrouselByFilter/Carrousel";
 //
 import { useState, useEffect } from "react";
 import axios from "axios";
 import apiConfig from "../apiConfig";
 
 export default function CHome() {
-  const [movies, setMovies] = useState([]);
-  const [page, setPage] = useState(1);
+  const [genres, setGenres] = useState([]);
 
   useEffect(() => {
-    const getAllMovies = async () => {
-      apiConfig.params.page = page;
-      const { data } = await axios.get("discover/movie", apiConfig);
-      setMovies((movies) => [...movies, ...data.results]);
+    const getAllGenres = async () => {
+      const { data } = await axios.get("genre/movie/list", apiConfig);
+      setGenres([...data.genres]);
     };
-    getAllMovies();
-
+    getAllGenres();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
-
+  }, []);
   return (
     <>
       <ScrollToTop />
-      <MovieList movies={movies} page={page} setPage={setPage} />
+      {genres.length ? (
+        <>
+          <Carrousel genre={genres[16]} />
+          <Carrousel genre={genres[0]} />
+          <Carrousel genre={genres[2]} />
+          <Carrousel genre={genres[3]} />
+          <Carrousel genre={genres[10]} />
+        </>
+      ) : null}
     </>
   );
 }

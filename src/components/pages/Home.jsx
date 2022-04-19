@@ -2,6 +2,7 @@
 import Header from "../Header";
 import CHome from "../CHome";
 import styled from "styled-components";
+import Footer from "../Footer/Footer";
 //Companies logos
 import disney from "../../assets/CompaniesLogos/Disney.webp";
 import hbo from "../../assets/CompaniesLogos/HBO.png";
@@ -43,6 +44,7 @@ export default function Home() {
       <main className="container mt-5">
         <CHome />
       </main>
+      <Footer />
     </>
   );
 }
