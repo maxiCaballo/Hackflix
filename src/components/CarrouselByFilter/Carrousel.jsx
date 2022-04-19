@@ -91,6 +91,7 @@ const ImgCarrousel = styled.img`
 `;
 const TitleGenre = styled.p`
   color: #fffafa80;
+
   &::first-letter {
     color: #e50914;
   }

@@ -17,11 +17,9 @@ function About() {
                 in the theory such as component properties, jsx, state
                 management and lifecycle. The final result of the site was made
                 at the end of the bootcamp because I thought it was a good idea
-                to polish this little project and add it to my portfolio.
+                to polish this project and add it to my portfolio.
               </p>
-              <p className="fs-3 mt-5" style={{ color: "grey" }}>
-                Used technologies
-              </p>
+              <H2 className="fs-3 mt-5">Technologies</H2>
               <ul>
                 <li>
                   <svg
@@ -101,9 +99,7 @@ function About() {
                   Bootstrap
                 </li>
               </ul>
-              <p className="fs-3 mt-5" style={{ color: "grey" }}>
-                Contact
-              </p>
+              <H2 className="fs-3 mt-5">Contact</H2>
               <ul>
                 <li>
                   <a
@@ -202,4 +198,12 @@ const Footer = styled.footer`
 const MyPhoto = styled.img`
   border-radius: 50%;
   height: 280px;
+`;
+const H2 = styled.p`
+  color: #fffafa80;
+  font-weight: 500;
+  &::first-letter {
+    color: #e54b09;
+    font-weight: 600;
+  }
 `;
