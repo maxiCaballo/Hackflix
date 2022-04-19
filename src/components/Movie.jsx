@@ -1,4 +1,7 @@
+//Components
 import Navbar from "./Navbar";
+
+//Dependencies
 import axios from "axios";
 import apiConfig from "../apiConfig";
 import { useParams } from "react-router-dom";

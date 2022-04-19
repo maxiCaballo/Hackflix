@@ -69,7 +69,7 @@ export default function Carrousel({ genre }) {
           movies.map((movie) => (
             <ImgContainer
               key={movie.id}
-              className="d-flex justify-content-center align-items-center"
+              className="d-flex justify-content-center align-items-center text-center"
               onClick={() => navigate(`/movies/${movie.id}`)}
               title={movie.title}
             >

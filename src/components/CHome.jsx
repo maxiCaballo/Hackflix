@@ -20,15 +20,15 @@ export default function CHome() {
   return (
     <>
       <ScrollToTop />
-      {genres.length ? (
+      {genres.length && (
         <>
-          <Carrousel genre={genres[16]} />
-          <Carrousel genre={genres[0]} />
-          <Carrousel genre={genres[2]} />
-          <Carrousel genre={genres[3]} />
           <Carrousel genre={genres[10]} />
+          <Carrousel genre={genres[16]} />
+          <Carrousel genre={genres[2]} />
+          <Carrousel genre={genres[0]} />
+          <Carrousel genre={genres[3]} />
         </>
-      ) : null}
+      )}
     </>
   );
 }

@@ -1,9 +1,11 @@
+//Components
+import Navbar from "./Navbar";
 import MovieList from "./MovieList";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
+//Dependencies
 import { useEffect, useState } from "react";
 import axios from "axios";
 import apiConfig from "../apiConfig";
-import Navbar from "./Navbar";
-import ScrollToTop from "./ScrollToTop/ScrollToTop";
 
 function SearchByTitle() {
   const [title, setTitle] = useState(1);

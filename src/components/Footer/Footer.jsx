@@ -1,12 +1,19 @@
-import FooterStyles from "./FooterStyles";
-import styled from "styled-components";
+import { FooterStyles } from "./FooterStyles";
 
 function Footer() {
-  return <FooterElement>Footer</FooterElement>;
+  return (
+    <FooterStyles>
+      <p>
+        <a
+          href="https://www.linkedin.com/in/maximiliano-caballo/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Hackflix © Hack Academy - Maximiliano Caballo - 2022
+        </a>
+      </p>
+    </FooterStyles>
+  );
 }
 
 export default Footer;
-
-const FooterElement = styled.footer`
-  background-color: red;
-`;
