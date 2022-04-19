@@ -59,7 +59,7 @@ function Header() {
                 >
                   {movie.title}
                 </p>
-                <div className="h-25 row">
+                <div className="h-25 row mb-5">
                   <span className="col-lg-6 fs-5 animate__animated animate__backInLeft centered">
                     Relase date : {movie.release_date}{" "}
                   </span>
