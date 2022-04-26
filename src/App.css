@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
 .centered {
   display: flex;
   align-items: center;
@@ -174,6 +177,9 @@ main > div {
   height: 100vh;
   background-color: rgba(22, 22, 22, 0.7);
 }
+.js-tilt-glare {
+  border-radius: 8%;
+}
 
 #MoviePage .movie-poster-image {
   border-radius: 8%;
@@ -205,6 +211,8 @@ main > div {
     font-size: 1rem !important;
   }
 }
+
+/*Button view official page*/
 button {
   position: relative;
   display: inline-block;
