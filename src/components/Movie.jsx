@@ -121,7 +121,7 @@ function Movie() {
           <ModalTrailer
             show={modalShow}
             onHide={() => setModalShow(false)}
-            movieVideos={trailers}
+            movievideos={trailers}
           />
         )}
       </main>

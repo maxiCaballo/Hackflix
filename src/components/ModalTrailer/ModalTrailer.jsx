@@ -3,13 +3,15 @@ import { Modal, Button } from "react-bootstrap";
 import YouTube from "react-youtube";
 
 function ModalTrailer(props) {
-  const movieVideos = props.movieVideos;
-  const [videoKey, setVideoKey] = useState("");
+  const movievideos = props.movievideos;
+  const [videoKey, setVideoKey] = useState(null);
   useEffect(() => {
-    const { key } = movieVideos.find(
-      (movie) =>
-        movie.type === "Trailer" && movie.official && movie.site === "YouTube"
-    );
+    const { key } =
+      movievideos.find(
+        (movie) =>
+          movie.type === "Trailer" && movie.official && movie.site === "YouTube"
+      ) || "";
+
     setVideoKey(key);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -32,11 +34,17 @@ function ModalTrailer(props) {
       </Modal.Header>
       <Modal.Body style={{ backgroundColor: "#000" }}>
         <div className="centered">
-          <YouTube
-            videoId={videoKey}
-            containerClassName="w-100"
-            className="w-100"
-          />
+          {videoKey ? (
+            <YouTube
+              videoId={videoKey}
+              containerClassName="w-100"
+              className="w-100"
+            />
+          ) : (
+            <p className="fs-2 text-center">
+              Sorry we could not find an official trailer
+            </p>
+          )}
         </div>
       </Modal.Body>
       <Modal.Footer style={{ backgroundColor: "#000" }} className="border-dark">
