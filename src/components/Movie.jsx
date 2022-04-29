@@ -6,7 +6,7 @@ import styled from "styled-components";
 import axios from "axios";
 import apiConfig from "../apiConfig";
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ReactStars from "react-rating-stars-component";
 import VanillaTilt from "vanilla-tilt";
 
@@ -15,13 +15,13 @@ function Movie() {
   const [movie, setMovie] = useState({});
   const [trailers, setTrailers] = useState([]);
   const { id: movieId } = useParams();
+  const movieCard = useRef();
+
   useEffect(() => {
     getMovie();
+    VanillaTilt.init(movieCard.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const movieCard = document.querySelector(".movie-poster-image-container");
-  VanillaTilt.init(movieCard);
 
   let starStylesValues = {
     size: 22,
@@ -105,7 +105,10 @@ function Movie() {
                 </div>
               </div>
             </div>
-            <div className="movie-poster-image-container d-none d-md-flex col-md-6 col-lg-4 h-100 centered">
+            <div
+              className="d-none d-md-flex col-md-6 col-lg-4 h-100 centered"
+              ref={movieCard}
+            >
               <div
                 className="movie-poster-image animate__animated animate__zoomIn data-tilt"
                 style={{

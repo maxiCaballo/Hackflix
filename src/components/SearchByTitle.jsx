@@ -33,7 +33,7 @@ function SearchByTitle() {
         <Navbar />
       </header>
       <main className="container search_title_main">
-        <div className="a">
+        <div>
           <div className="input_search rounded-pill border">
             <i className="fa-solid fa-magnifying-glass p-1"></i>
             <input

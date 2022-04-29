@@ -26,11 +26,11 @@ header .header-logo:hover {
 .navbar-item {
   position: relative;
   text-decoration: none;
-  color: rgb(225, 223, 223);
+  color: rgb(163, 163, 163);
   transition: 0.3s;
 }
 .navbar-item:hover {
-  color: rgb(235, 39, 0);
+  color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 991px) {

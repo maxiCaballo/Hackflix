@@ -41,7 +41,10 @@ export default function MovieList({ movies, setPage, page }) {
                     />
                   </ImgContainer>
                 ) : (
-                  <div className=" list_img d-flex flex-column justify-content-evenly border border-radius-card bg-dark">
+                  <div
+                    className=" list_img d-flex flex-column justify-content-evenly border border-radius-card bg-dark"
+                    key={movie.id * Math.random()}
+                  >
                     <p className="d-flex flex row justify-content-center">
                       <i className="fa-solid fa-triangle-exclamation mx-3 text-warning text-center"></i>
                       <span className="text-center">
