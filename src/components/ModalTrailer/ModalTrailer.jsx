@@ -11,7 +11,6 @@ function ModalTrailer(props) {
         (movie) =>
           movie.type === "Trailer" && movie.official && movie.site === "YouTube"
       ) || "";
-
     setVideoKey(key);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
