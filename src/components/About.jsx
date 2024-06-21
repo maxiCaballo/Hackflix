@@ -11,10 +11,10 @@ function About() {
 					<Grid>
 						<AboutThisProject>
 							<p>
-								This project was done during the January 2022 edition of the coding bootcamp at hack academy and during the
-								sprint related to React. Gradually i putt into practice all the knowledge acquired in the theory such as
-								component properties, jsx, state management and lifecycle. The final result of the site was made at the end of
-								the bootcamp because I thought it was a good idea to polish this project and add it to my portfolio.
+								This project is a movie catalog application built using React. It connects to a public API to display a
+								collection of movies, allowing users to filter by genre, title, or rating. Each movie has a dedicated page where
+								users can watch its trailer. The application was developed as a practice to apply React concepts such as hooks,
+								JSX, and component lifecycle methods etc.
 							</p>
 							<H2 className='fs-3 mt-5'>Technologies</H2>
 							<ul>
