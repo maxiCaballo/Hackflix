@@ -14,7 +14,7 @@ function About() {
 								This project is a movie catalog application built using React. It connects to a public API to display a
 								collection of movies, allowing users to filter by genre, title, or rating. Each movie has a dedicated page where
 								users can watch its trailer. The application was developed as a practice to apply React concepts such as hooks,
-								JSX, and component lifecycle methods etc.
+								JSX, and component lifecycle methods etc..
 							</p>
 							<H2 className='fs-3 mt-5'>Technologies</H2>
 							<ul>
